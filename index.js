@@ -13,4 +13,6 @@ client.on('message', (message) => {
 	}
 });
 
+console.log(JSON.stringify(arry));
+
 client.login(process.env['TOKEN']);
