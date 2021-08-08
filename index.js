@@ -1,18 +1,18 @@
-const { Client } = require('discord.js');
+const {Client} = require('discord.js');
 
-const client = new Client();
+const { createClient } = require('@supabase/supabase-js');
 
-client.on('ready', () => {
-	console.log(`[${client.user.tag}] has logged in`);
-});
+const supabase = createClient(
+  	process.env['SUPABASE_URL'],
+  	process.env['SUPABASE_PUBLIC_KEY']
+)
 
-client.on('message', (message) => {
-	console.log(`[${message.author.tag}] ${message.content}`);
-	if(message.author.id != client.user.id) {
-		message.channel.send("a");
-	}
-});
+async function f1() {
+	var { data, error } = await supabase
+    	.from('countries')
+    	.select('*')
+    	.limit(5);
+	console.log(data);
+};
 
-console.log(JSON.stringify(arry));
-
-client.login(process.env['TOKEN']);
+f1();

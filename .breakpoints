@@ -1,0 +1,20 @@
+{
+  "files": {
+    "index.js": [
+      {
+        "id": "0ade5749-adce-4be8-9954-45332c08e981",
+        "line": 2,
+        "version": 1812,
+        "index": 40
+      }
+    ],
+    "my_database_classes.js": [
+      {
+        "id": "08734813-8efc-462b-8464-b87dbdeee7d2",
+        "line": 77,
+        "version": 1254,
+        "index": 1885
+      }
+    ]
+  }
+}
